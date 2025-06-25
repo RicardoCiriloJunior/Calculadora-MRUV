@@ -1,0 +1,212 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik);
+* {
+    margin: 0;
+    padding: 0;
+  }
+  :root {
+    --cor-primaria: #203C27;
+    --cor-secundaria: #96EB98;
+    --cor-terciaria:#478356;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Rubik';
+    min-height: 99.8vh;
+    flex-wrap: wrap;
+    color: var(--cor-primaria);
+    background-color: white;
+  }
+
+   #navbar ul{
+    display: flex;
+    gap: 1.5%;
+    margin-top: 0.5%;
+    margin-left: 2.5%;
+  } 
+
+  li{
+    list-style: none;
+  }
+
+  #navbar a{
+    position: relative;
+    text-decoration: none;
+    color: var(--cor-primaria);
+  }
+
+  #navbar a.ativa{
+    font-weight: bold;
+    color: #22C55E;
+  }
+
+  #navbar a.desativada:hover{
+    color: #66ba7b;
+  }
+
+
+  main{
+    display: flex;
+    width: 100%;
+    height: 94vh;;
+  }
+
+  .informacoes{
+    display: flex;
+    flex-direction: column;
+    background-color: #DCFCE7;
+    width: 50%;
+  }
+
+  #bloco-input{
+    padding: 4% 7%;
+    background-color: white;
+    border: 2px solid #22C55E;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 6.5%;
+    width: 40%;
+  }
+
+  .label-radio:hover, input[type="radio"]:checked + .label-radio{
+    color: #22C55E;
+  }
+
+  #titulo, h2{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: auto;
+    margin-bottom: 5%;
+    color: var(--cor-terciaria);
+  }
+
+  #oqueCalcular .inputsNumber{
+    margin-top: 5%;
+    margin-left: -20%;
+  }
+
+  #pergunta{
+    color: var(--cor-terciaria);
+  }
+
+  .input-radio{
+    margin-top: 5%;
+  }
+
+  input[type= "number" ]::-webkit-outer-spin-button,
+  input[type= "number" ]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+  }
+
+  input[type="radio"],
+  li > label {
+    cursor: pointer;
+  }
+
+  .inputsNumber{
+    margin-top: 10%;
+  }
+
+  .input{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+  }
+
+  .input label{
+    margin-bottom: 0.75%;
+  }
+
+  .input input{
+    padding: 2% 15%;
+    border-radius: 4%;
+    border: 2px solid rgb(216, 216, 216);
+  }
+
+  .input input:hover{
+    border: 0.2em solid #22C55E;
+  }
+
+  .input input:focus, .input input:not(:placeholder-shown) {
+    outline: none;
+    border: 2px solid var(--cor-secundaria);
+  }
+
+  button{
+    padding: 2% 41%;
+    border-radius: 4%;
+    outline: none;
+    background-color: var(--cor-primaria);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  button:hover{
+    opacity: 85%;
+  }
+
+  .calculo{
+    background-color: white;
+    width: 50%;
+    box-shadow:2px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .descricao{
+    background-color: rgb(247, 247, 247);
+    padding: 4% 7%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    margin-top: 6%;
+    width: 40%;
+  }
+   
+  #info-icone{
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+    width: 50px;
+    cursor: pointer;
+  }
+
+  #info-icone:hover{
+    opacity: 80%;
+  }
+
+  .fundo{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  #info:checked + .fundo{
+    display: flex;
+  }
+
+  .caixa{
+    background: white;
+    padding: 5%;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 2%;
+    box-shadow: 0 0 15 px rgba(0, 0, 0, 2);
+    font-size: 1rem;
+  }
+
+  .fechar{
+    float: right;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--cor-primaria);
+  }
+
+  .fechar:hover{
+    color: red;
+  }
